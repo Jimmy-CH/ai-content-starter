@@ -1,8 +1,7 @@
-import os
+
 from dotenv import load_dotenv
 load_dotenv()
-# 👇 临时添加：打印 Key（部署前记得删除！）
-print("Loaded DEEPSEEK_API_KEY:", os.getenv("DEEPSEEK_API_KEY"))
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from api.v1.generate import router as generate_router
